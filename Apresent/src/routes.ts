@@ -11,7 +11,7 @@ const router = Router();
 // Fornecedor
 router.get('/listfornecedor', FornecedorController.list);
 router.get('/forncedor/:id', FornecedorController.find);
-router.post('/logincliente', ClienteController.login);
+router.post('/loginfornecedor', FornecedorController.login);
 router.post('/insertfornecedor', FornecedorController.store)
 router.put('/updatefornecedor', FornecedorController.update);
 router.delete('deletevendedor/:cpf', FornecedorController.delete)
@@ -45,5 +45,6 @@ router.get('/peca/:id', PecaController.find);
 router.delete('/deletepeca/:id', PecaController.delete);
 router.put('/updatepeca', PecaController.update);
 router.post('/insertpeca', PecaController.store);
+router.post('/addpeca', PecaController.store);
 
 export default router;

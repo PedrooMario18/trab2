@@ -1,11 +1,11 @@
-import {Entity, Column, PrimaryColumn, ManyToOne, JoinColumn, ChildEntity} from 'typeorm';
+import {Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn, ChildEntity} from 'typeorm';
 // import Pedido from './Pedido';
 //imports
 
 @Entity('tb_peca')
 class Peca {
 
-    @PrimaryColumn('text')
+    @PrimaryGeneratedColumn()
     id: string;
 
     @Column('text')
