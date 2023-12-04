@@ -10,15 +10,15 @@ const router = Router();
 
 // Fornecedor
 router.get('/listfornecedor', FornecedorController.list);
-router.get('/forncedor/:id', FornecedorController.find);
+router.get('/forncedor/:cpf', FornecedorController.find);
 router.post('/loginfornecedor', FornecedorController.login);
 router.post('/insertfornecedor', FornecedorController.store)
-router.put('/updatefornecedor', FornecedorController.update);
+router.put('/updatefornecedor/:cpf', FornecedorController.update);
 router.delete('deletevendedor/:cpf', FornecedorController.delete)
 
 // Vendedor
 router.get('/listvendedor', VendedorController.list);
-router.get('/vendedor/:id', VendedorController.find);
+router.get('/vendedor/:cpf', VendedorController.find);
 router.post('/loguinvendedor', ClienteController.login);
 router.delete('/deletevendedor/:cpf', VendedorController.delete);
 router.put('/updatevendedor', VendedorController.update);
